@@ -7,7 +7,7 @@ get '/modems' do
   @data = {}
   @array = []
   Modems = Struct.new(:modem)
-  Modem =  Struct.new(:DID,:lat,:lon,:serial_number,:name)
+  Modem =  Struct.new(:did,:lat,:lon,:serial_number,:name)
   @modems = Modems.new(
     [
       Modem.new(234,125162,436346,'ASG123','Astipalea').to_h,
